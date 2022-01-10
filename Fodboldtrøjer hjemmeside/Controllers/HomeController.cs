@@ -26,5 +26,11 @@ namespace Fodboldtrøjer_hjemmeside.Controllers
 
             return View();
         }
+        public ActionResult BrowseTrøjer()
+        {
+
+            return View();
+        }
+
     }
 }
