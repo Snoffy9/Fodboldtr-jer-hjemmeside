@@ -15,16 +15,22 @@ namespace Fodboldtrøjer_hjemmeside.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Hvad er DK trøjer?";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Kundeservice er åben:";
 
             return View();
         }
+        public ActionResult BrowseTrøjer()
+        {
+
+            return View();
+        }
+
     }
 }
