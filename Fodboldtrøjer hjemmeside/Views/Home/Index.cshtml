@@ -10,8 +10,10 @@
     }
 
     .my-container {
-        margin-top: 100px;
+        margin-top: 30px;
         width: 1200px;
+        margin-left:0px;
+        padding:0px;
     }
 
     .my-image {
@@ -28,42 +30,80 @@
         text-decoration: none;
         display: inline-block;
         border-radius: 50px;
-        width: 200px;
-        border:black;
-        border: 2px;
+        width: 800px;
+        border: 1px solid black;
+        font-size: 30px;
     }
 
     a.dinmor:hover, a:active {
-        background-color: darkred;
+        background-color: lightgrey;
     }
 
+    .my-container1{
+        width:1440px;
+        padding:0px;
+        margin-left:0px;
+    }
+
+    .trøjerForside{
+        margin-left:170px;
+    }
+
+    .textForside{
+        position: absolute;
+        top: 130px;
+        right: 50px;
+        font-size:90px;
+        font-weight: 900;
+    }
+
+    .textVidere {
+        position: absolute;
+        bottom: 130px;
+        left: 50px;
+    }
 
 </style>
 
-
-<div style="text-align: center; margin-top: 50px;">
-    <h1 style="font-size:100px;">Populære trøjer</h1>
-</div>
-<div class="container my-container">
-    <div class="row my-row">
-        <div class="col-md-4 my-col">
-            <h4>FC Midtjylland 17/18</h4>
-            <img class="my-image" src="~/Images/FCM-17-17.jpg" />
+    <div class="container my-container1">
+    <img src="~/Images/Trøjeshop (2).jpg" style="        
+        width: 1520px;
+        margin-left: 0px;
+        max-height: 670px;
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+        clip-path: ellipse(1520px 670px at 98% 0%);" />
+        <div class="textForside">
+            DK TRØJER
         </div>
-        <div class="col-md-4 my-col">
-            <h4>Brøndby IF 18/19</h4>
-            <img class="my-image" src="~/Images/Brøndby-18-19.jpg" />
-        </div>
-        <div class="col-md-4 my-col">
-            <h4>Silkeborg IF 19/20</h4>
-            <img class="my-image" src="~/Images/SIF-19-20.jpg" />
+        <div class="textVidere">
+            Hvalp
         </div>
     </div>
-</div>
-<br/>
 
+    <div class="trøjerForside">
+        <div style="text-align: center; margin-top:20px; margin-left:220px;">
+            <h1 style="font-size:100px;">Populære trøjer</h1>
+        </div>
+        <div class="container my-container">
+            <div class="row my-row">
+                <div class="col-md-4 my-col">
+                    <h4>FC Midtjylland 17/18</h4>
+                    <img class="my-image" src="~/Images/FCM-17-17.jpg" />
+                </div>
+                <div class="col-md-4 my-col">
+                    <h4>Brøndby IF 18/19</h4>
+                    <img class="my-image" src="~/Images/Brøndby-18-19.jpg" />
+                </div>
+                <div class="col-md-4 my-col">
+                    <h4>Silkeborg IF 19/20</h4>
+                    <img class="my-image" src="~/Images/SIF-19-20.jpg" />
+                </div>
+            </div>
+        </div>
+        <br />
+    </div>
 
-    <a href="/Home/BrowseTrøjer" class="dinmor" style="margin-left:500px;"
->Se alle trøjer</a>
+    <a href="/Home/BrowseTrøjer" class="dinmor" style="margin-left:365px;">Se alle trøjer</a>
 
 
