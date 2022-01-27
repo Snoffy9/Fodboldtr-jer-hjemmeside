@@ -135,9 +135,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\AaB 1920.jpg" />
     <Content Include="Images\Brøndby-18-19.jpg" />
     <Content Include="Images\FCM-17-17.jpg" />
+    <Content Include="Images\Nordsjælland 1920.jpg" />
+    <Content Include="Images\OB 2021.jpg" />
+    <Content Include="Images\Rander 1819.jpg" />
+    <Content Include="Images\Randers 1819 pt 2.jpg" />
     <Content Include="Images\SIF-19-20.jpg" />
+    <Content Include="Images\vejle 2122.jpg" />
+    <Content Include="Images\Viborg 2122.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
