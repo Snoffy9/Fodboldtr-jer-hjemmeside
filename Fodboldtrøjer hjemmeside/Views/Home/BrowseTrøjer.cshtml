@@ -5,10 +5,58 @@
     <meta charset="utf-8" />
     <title>VORES UDVALG</title>
     <!-- Bootstrap CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+          crossorigin="anonymous">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" 
+          href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+          integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
+          crossorigin="anonymous" />
+
 </head>
+
+<style>
+    .filterDiv {
+        float: left;
+        background-color: #ddd;
+        color: black;
+        width: 300px;
+        line-height: 20px;
+        text-align: center;
+        margin: 2px;
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .container {
+        margin-top: 20px;
+        overflow: hidden;
+    }
+
+    /* Style the buttons */
+    .btn {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+    }
+
+        .btn:hover {
+            background-color: #000000;
+        }
+
+        .btn.active {
+            background-color: #ddd;
+            color: black;
+        }
+</style>
+
 <body>
 
 
@@ -18,8 +66,27 @@
             <hr>
             <p>HER KAN DU SE ALLE TRØJER VI HAR TIL SALG PÅ SIDEN</p>
         </div>
+
+
+
+
+        <h2>Her kan du vælge hvilke trøjer du vil se</h2>
+
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Vis alle trøjer</button>
+            <button class="btn" onclick="filterSelection('popular')"> Mest Populære</button>
+            <button class="btn" onclick="filterSelection('home')"> Hjemmebanetrøjer</button>
+            <button class="btn" onclick="filterSelection('away')"> Udebanetrøjer</button>
+            <button class="btn" onclick="filterSelection('cheap')"> Billige trøjer</button>
+        </div>
+
+       
+
+
+
+
         <div class=" row mx-auto container-fluid ">
-            <div class=" product text-center col-lg-3 col-md-4 col-sm-12 ">
+            <div class=" filterDiv all home cheap product text-center col-lg-3 col-md-4 col-sm-12 ">
 
                 <img class=" img-fluid mb-10 mt-5  " src="~/Images/Viborg 2122.jpg" />
                 <div class=" star ">
@@ -32,7 +99,9 @@
                 <h2 class=" p-price">299 KR</h2>
                 <button class=" buy-btn  "> Køb her</button>
             </div>
-            <div class=" product text-center col-lg-3 col-md-4 col-sm-12 ">
+
+
+            <div class=" filterDiv all home popular product text-center col-lg-3 col-md-4 col-sm-12 ">
 
                 <img class=" img-fluid mb-10 mt-5 " src="~/Images/Brøndby-18-19.jpg" />
                 <div class=" star">
@@ -46,7 +115,8 @@
                 <h2 class=" p-price">449 KR</h2>
                 <button class=" buy-btn"> Køb her</button>
             </div>
-            <div class=" product text-center col-lg-3 col-md-4 col-sm-12 ">
+
+            <div class=" filterDiv all home popular product text-center col-lg-3 col-md-4 col-sm-12 ">
 
                 <img class=" img-fluid mb-10 mt-5 " src="~/Images/FCM-17-17.jpg" />
                 <div class=" star">
@@ -60,7 +130,9 @@
                 <h2 class=" p-price">399 KR</h2>
                 <button class=" buy-btn"> Køb her</button>
             </div>
-            <div class=" product text-center col-lg-3 col-md-4 col-sm-12 ">
+
+
+            <div class=" filterDiv home popular cheap product text-center col-lg-3 col-md-4 col-sm-12 ">
 
                 <img class=" img-fluid mb-10 mt-5 " src="~/Images/SIF-19-20.jpg" />
                 <div class=" star">
@@ -73,9 +145,11 @@
                 <h2 class=" p-price">249 KR</h2>
                 <button class=" buy-btn"> Køb her</button>
             </div>
-            <div class=" product text-center col-lg-3 col-md-4 col-sm-12 ">
 
-                <img class=" img-fluid mb-10 mt-5 " src="~/Images/OB 2021.jpg" />
+
+            <div class=" filterDiv all away cheap product text-center col-lg-3 col-md-4 col-sm-12 ">
+
+                <img class=" img-fluid mb-10 mt-5 " src="~/Images/OB away 2021.jpg" />
                 <div class=" star">
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
@@ -86,7 +160,7 @@
                 <h2 class=" p-price">299 KR</h2>
                 <button class=" buy-btn"> Køb her</button>
             </div>
-            <div class=" product text-center col-lg-3 col-md-4 col-sm-12 ">
+            <div class=" filterDiv all home  product text-center col-lg-3 col-md-4 col-sm-12 ">
 
                 <img class=" img-fluid mb-10 mt-5 " src="~/Images/Nordsjælland 1920.jpg" />
                 <div class=" star">
@@ -100,7 +174,8 @@
                 <h2 class=" p-price">399 KR</h2>
                 <button class=" buy-btn"> Køb her</button>
             </div>
-            <div class=" product text-center col-lg-3 col-md-4 col-sm-12 ">
+
+            <div class=" filterDiv all home cheap product text-center col-lg-3 col-md-4 col-sm-12 ">
 
                 <img class=" img-fluid mb-10 mt-5 " src="~/Images/vejle 2122.jpg" />
                 <div class=" star">
@@ -113,8 +188,8 @@
                 <h2 class=" p-price">299 KR</h2>
                 <button class=" buy-btn"> Køb her</button>
             </div>
-            <div class=" product text-center col-lg-3 col-md-4 col-sm-12 ">
 
+            <div class=" filterDiv all home popular product text-center col-lg-3 col-md-4 col-sm-12 ">
                 <img class=" img-fluid mb-10 mt-5 " src="~/Images/AaB 1920.jpg" />
                 <div class=" star">
                     <i class="fas fa-star"></i>
@@ -135,11 +210,53 @@
 
     </section>
 
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
 
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
 
 
 </html>
-<a href="~/Views/Home/BrowseTrøjer.cshtml">~/Views/Home/BrowseTrøjer.cshtml</a>
